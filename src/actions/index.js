@@ -5,6 +5,14 @@ export const addTodo = text => ({
   text
 })
 
+export const addTodoWithSummary = newToDo => ({
+  type: 'ADD_TODOWITHSUMMARY',
+  id: nextTodoId++,
+  text : newToDo.text,
+  summary : newToDo.summary
+
+})
+
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter

@@ -6,6 +6,17 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
+          summary: action.summary,
+          completed: false
+        }
+      ]
+    case 'ADD_TODOWITHSUMMARY':
+      return [
+        ...state,
+        {
+          id: action.id,
+          text: action.text,
+          summary: action.summary,
           completed: false
         }
       ]
